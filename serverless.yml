@@ -16,12 +16,6 @@ plugins:
   - serverless-plugin-typescript
 
 functions:
-  api:
-    handler: src/index.hello
-    events:
-      - httpApi:
-          path: /
-          method: get
   addTodo:  
     handler: src/addTodo.addTodo
     events:
@@ -40,7 +34,7 @@ functions:
       - httpApi:
           path: /todo/{id}
           method: get
-  fetchTodo:  
+  updateTodo:  
     handler: src/updateTodo.updateTodo
     events:
       - httpApi:
