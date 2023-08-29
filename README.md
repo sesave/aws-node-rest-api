@@ -16,7 +16,7 @@ This repository contains a serverless CRUD (Create, Read, Update) API implemente
 - AWS account for deployment (update credentials in configuration)
 - Serverless Framework installed globally (npm install -g serverless)
 
-## Features
+### Features
 - Serverless Architecture: The API is built using serverless technologies, leveraging the power of cloud computing without the overhead of managing servers.
 
 - CRUD Operations: The API supports standard CRUD operations, allowing you to easily manage your data resources.
@@ -26,8 +26,6 @@ This repository contains a serverless CRUD (Create, Read, Update) API implemente
 - API Gateway: Amazon API Gateway is integrated to manage API endpoints, security, rate limiting, and more.
 
 - Data Storage: Data is stored in a suitable serverless database or storage service, providing persistence for your resources.
-
-
 
 ### API Endpoints
 POST /: Create a new todo item
