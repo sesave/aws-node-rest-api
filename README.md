@@ -28,10 +28,10 @@ This repository contains a serverless CRUD (Create, Read, Update) API implemente
 - Data Storage: Data is stored in a suitable serverless database or storage service, providing persistence for your resources.
 
 ### API Endpoints
-POST /: Create a new todo item
-GET /todos: Retrieve the todo items
-GET /todo/{id}: Retrieve an todo item by ID
-PUT /todo/{id}: Update an existing todo item
+- POST /: Create a new todo item
+- GET /todos: Retrieve the todo items
+- GET /todo/{id}: Retrieve an todo item by ID
+- PUT /todo/{id}: Update an existing todo item
 
 ### Techs Used:
 - AWS SDK
