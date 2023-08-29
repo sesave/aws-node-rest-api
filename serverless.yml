@@ -1,0 +1,62 @@
+service: aws-node-rest-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  iamRoleStatetements: 
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource:
+        - 
+
+plugins:
+  - serverless-plugin-typescript
+
+functions:
+  api:
+    handler: src/index.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+  addTodo:  
+    handler: src/addTodo.addTodo
+    events:
+      - httpApi:
+          path: /
+          method: post
+  fetchTodos:  
+    handler: src/fetchTodos.fetchTodos
+    events:
+      - httpApi:
+          path: /todos
+          method: get
+  fetchTodo:  
+    handler: src/fetchTodo.fetchTodo
+    events:
+      - httpApi:
+          path: /todo/{id}
+          method: get
+  fetchTodo:  
+    handler: src/updateTodo.updateTodo
+    events:
+      - httpApi:
+          path: /todo/{id}
+          method: put
+
+resources:
+  Resources:
+    TodoTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: TodoTable
+        BilingMode: PAY_PER_REQUEST
+        AttribuesDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH

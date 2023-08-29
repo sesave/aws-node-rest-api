@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "serverless-plugin-typescript": "^2.1.5",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@middy/core": "^4.6.0",
+    "@middy/http-json-body-parser": "^4.6.0",
+    "aws-sdk": "^2.1446.0",
+    "uuid": "^9.0.0"
+  }
+}
